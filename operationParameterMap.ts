@@ -105,16 +105,6 @@ export const operationParameterMap: Record<string, Entry> = {
             },
         ]
     },
-    '/api/v1/auth/dashboard-access/{app_id}-POST': {
-        parameters: [
-            {
-                name: 'app_id'
-            },
-            {
-                name: 'idempotency-key'
-            },
-        ]
-    },
     '/api/v1/auth/app-portal-access/{app_id}-POST': {
         parameters: [
             {
@@ -125,6 +115,16 @@ export const operationParameterMap: Record<string, Entry> = {
             },
             {
                 name: 'expiry'
+            },
+            {
+                name: 'idempotency-key'
+            },
+        ]
+    },
+    '/api/v1/auth/dashboard-access/{app_id}-POST': {
+        parameters: [
+            {
+                name: 'app_id'
             },
             {
                 name: 'idempotency-key'
@@ -425,6 +425,19 @@ export const operationParameterMap: Record<string, Entry> = {
             },
         ]
     },
+    '/api/v1/app/{app_id}/endpoint/{endpoint_id}/headers-PUT': {
+        parameters: [
+            {
+                name: 'headers'
+            },
+            {
+                name: 'app_id'
+            },
+            {
+                name: 'endpoint_id'
+            },
+        ]
+    },
     '/api/v1/app/{app_id}/endpoint/{endpoint_id}-PUT': {
         parameters: [
             {
@@ -459,19 +472,6 @@ export const operationParameterMap: Record<string, Entry> = {
             },
             {
                 name: 'metadata'
-            },
-        ]
-    },
-    '/api/v1/app/{app_id}/endpoint/{endpoint_id}/headers-PUT': {
-        parameters: [
-            {
-                name: 'headers'
-            },
-            {
-                name: 'app_id'
-            },
-            {
-                name: 'endpoint_id'
             },
         ]
     },
@@ -514,6 +514,19 @@ export const operationParameterMap: Record<string, Entry> = {
             },
         ]
     },
+    '/api/v1/event-type/import/openapi-POST': {
+        parameters: [
+            {
+                name: 'spec'
+            },
+            {
+                name: 'specRaw'
+            },
+            {
+                name: 'idempotency-key'
+            },
+        ]
+    },
     '/api/v1/event-type-GET': {
         parameters: [
             {
@@ -530,19 +543,6 @@ export const operationParameterMap: Record<string, Entry> = {
             },
             {
                 name: 'with_content'
-            },
-        ]
-    },
-    '/api/v1/event-type/import/openapi-POST': {
-        parameters: [
-            {
-                name: 'spec'
-            },
-            {
-                name: 'specRaw'
-            },
-            {
-                name: 'idempotency-key'
             },
         ]
     },

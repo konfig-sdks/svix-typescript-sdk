@@ -1,6 +1,6 @@
 {
   "name": "svix-typescript-sdk",
-  "version": "1.20.0",
+  "version": "1.21.0",
   "description": "Client for Svix API",
   "author": "Konfig",
   "engines": {

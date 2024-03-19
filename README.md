@@ -64,60 +64,60 @@ This API features Cross-Origin Resource Sharing (CORS) implemented in compliance
   * [`svix.application.listAll`](#svixapplicationlistall)
   * [`svix.application.partiallyUpdate`](#svixapplicationpartiallyupdate)
   * [`svix.application.removeApp`](#svixapplicationremoveapp)
-  * [`svix.application.updateApp`](#svixapplicationupdateapp)
-  * [`svix.authentication.expireAppTokens`](#svixauthenticationexpireapptokens)
-  * [`svix.authentication.generateMagicLink`](#svixauthenticationgeneratemagiclink)
-  * [`svix.authentication.obtainMagicLinkAndCode`](#svixauthenticationobtainmagiclinkandcode)
-  * [`svix.authentication.revokeToken`](#svixauthenticationrevoketoken)
-  * [`svix.backgroundTasks.getTaskById`](#svixbackgroundtasksgettaskbyid)
-  * [`svix.backgroundTasks.listRecentTasks`](#svixbackgroundtaskslistrecenttasks)
-  * [`svix.endpoint.createNew`](#svixendpointcreatenew)
-  * [`svix.endpoint.getEndpoint`](#svixendpointgetendpoint)
+  * [`svix.application.updateApplicationById`](#svixapplicationupdateapplicationbyid)
+  * [`svix.authentication.expireAllTokens`](#svixauthenticationexpirealltokens)
+  * [`svix.authentication.generateMagicLinks`](#svixauthenticationgeneratemagiclinks)
+  * [`svix.authentication.getMagicLinks`](#svixauthenticationgetmagiclinks)
+  * [`svix.authentication.logoutToken`](#svixauthenticationlogouttoken)
+  * [`svix.backgroundTasks.getById`](#svixbackgroundtasksgetbyid)
+  * [`svix.backgroundTasks.getPastTasks`](#svixbackgroundtasksgetpasttasks)
+  * [`svix.endpoint.createOrUpdate`](#svixendpointcreateorupdate)
+  * [`svix.endpoint.getDetails`](#svixendpointgetdetails)
   * [`svix.endpoint.getHeaders`](#svixendpointgetheaders)
-  * [`svix.endpoint.getSecret`](#svixendpointgetsecret)
-  * [`svix.endpoint.getStats`](#svixendpointgetstats)
+  * [`svix.endpoint.getSigningSecret`](#svixendpointgetsigningsecret)
+  * [`svix.endpoint.getStatistics`](#svixendpointgetstatistics)
   * [`svix.endpoint.getTransformationCode`](#svixendpointgettransformationcode)
   * [`svix.endpoint.listEndpoints`](#svixendpointlistendpoints)
   * [`svix.endpoint.partiallySetHeaders`](#svixendpointpartiallysetheaders)
   * [`svix.endpoint.partiallyUpdate`](#svixendpointpartiallyupdate)
   * [`svix.endpoint.remove`](#svixendpointremove)
   * [`svix.endpoint.replayMissingWebhooks`](#svixendpointreplaymissingwebhooks)
-  * [`svix.endpoint.resendFailedWebhooks`](#svixendpointresendfailedwebhooks)
+  * [`svix.endpoint.resendFailedMessages`](#svixendpointresendfailedmessages)
   * [`svix.endpoint.rotateSecret`](#svixendpointrotatesecret)
-  * [`svix.endpoint.sendExampleMessage`](#svixendpointsendexamplemessage)
+  * [`svix.endpoint.sendExampleMessageType`](#svixendpointsendexamplemessagetype)
   * [`svix.endpoint.setTransformationCode`](#svixendpointsettransformationcode)
-  * [`svix.endpoint.updateEndpoint`](#svixendpointupdateendpoint)
-  * [`svix.endpoint.updateHeaders`](#svixendpointupdateheaders)
-  * [`svix.eventType.archiveType`](#svixeventtypearchivetype)
+  * [`svix.endpoint.setWebhookHeaders`](#svixendpointsetwebhookheaders)
+  * [`svix.endpoint.updateEndpointById`](#svixendpointupdateendpointbyid)
+  * [`svix.eventType.archive`](#svixeventtypearchive)
   * [`svix.eventType.createOrUpdate`](#svixeventtypecreateorupdate)
-  * [`svix.eventType.getByName`](#svixeventtypegetbyname)
-  * [`svix.eventType.getList`](#svixeventtypegetlist)
+  * [`svix.eventType.getEventType`](#svixeventtypegeteventtype)
   * [`svix.eventType.importFromOpenapi`](#svixeventtypeimportfromopenapi)
-  * [`svix.eventType.partiallyUpdateType`](#svixeventtypepartiallyupdatetype)
-  * [`svix.eventType.updateType`](#svixeventtypeupdatetype)
-  * [`svix.health.checkServerStatus`](#svixhealthcheckserverstatus)
+  * [`svix.eventType.list`](#svixeventtypelist)
+  * [`svix.eventType.partiallyUpdateEventType`](#svixeventtypepartiallyupdateeventtype)
+  * [`svix.eventType.updateEventTypeName`](#svixeventtypeupdateeventtypename)
+  * [`svix.health.checkStatus`](#svixhealthcheckstatus)
   * [`svix.integration.createNewIntegration`](#svixintegrationcreatenewintegration)
   * [`svix.integration.deleteById`](#svixintegrationdeletebyid)
   * [`svix.integration.getById`](#svixintegrationgetbyid)
   * [`svix.integration.getKey`](#svixintegrationgetkey)
-  * [`svix.integration.listIntegrations`](#svixintegrationlistintegrations)
-  * [`svix.integration.rotateIntegrationKey`](#svixintegrationrotateintegrationkey)
-  * [`svix.integration.updateIntegration`](#svixintegrationupdateintegration)
-  * [`svix.message.createNew`](#svixmessagecreatenew)
+  * [`svix.integration.list`](#svixintegrationlist)
+  * [`svix.integration.rotateKey`](#svixintegrationrotatekey)
+  * [`svix.integration.updateIntegrationById`](#svixintegrationupdateintegrationbyid)
+  * [`svix.message.createNewMsg`](#svixmessagecreatenewmsg)
   * [`svix.message.deletePayload`](#svixmessagedeletepayload)
   * [`svix.message.getByIdOrEventId`](#svixmessagegetbyidoreventid)
   * [`svix.message.listAllMessages`](#svixmessagelistallmessages)
   * [`svix.messageAttempt.deleteResponseBody`](#svixmessageattemptdeleteresponsebody)
-  * [`svix.messageAttempt.getByDestination`](#svixmessageattemptgetbydestination)
+  * [`svix.messageAttempt.getByAttempt`](#svixmessageattemptgetbyattempt)
   * [`svix.messageAttempt.listAttemptedDestinations`](#svixmessageattemptlistattempteddestinations)
   * [`svix.messageAttempt.listAttemptedMessages`](#svixmessageattemptlistattemptedmessages)
   * [`svix.messageAttempt.listByEndpoint`](#svixmessageattemptlistbyendpoint)
   * [`svix.messageAttempt.listByEndpointDeprecated`](#svixmessageattemptlistbyendpointdeprecated)
-  * [`svix.messageAttempt.listByMsgAttemptedDestinations`](#svixmessageattemptlistbymsgattempteddestinations)
-  * [`svix.messageAttempt.listByMsgAttemptedDestinations_0`](#svixmessageattemptlistbymsgattempteddestinations_0)
-  * [`svix.messageAttempt.resendMessageToEndpoint`](#svixmessageattemptresendmessagetoendpoint)
-  * [`svix.statistics.calculateEventTypesForAllApps`](#svixstatisticscalculateeventtypesforallapps)
-  * [`svix.statistics.calculateMessageDestinations`](#svixstatisticscalculatemessagedestinations)
+  * [`svix.messageAttempt.listByMsg`](#svixmessageattemptlistbymsg)
+  * [`svix.messageAttempt.listByMsgAttempt`](#svixmessageattemptlistbymsgattempt)
+  * [`svix.messageAttempt.resendWebhook`](#svixmessageattemptresendwebhook)
+  * [`svix.statistics.calculateEventTypesForApps`](#svixstatisticscalculateeventtypesforapps)
+  * [`svix.statistics.calculateMessageDestinationsForApps`](#svixstatisticscalculatemessagedestinationsforapps)
 
 <!-- tocstop -->
 
@@ -340,18 +340,19 @@ The app\'s ID or UID
 ---
 
 
-### `svix.application.updateApp`<a id="svixapplicationupdateapp"></a>
+### `svix.application.updateApplicationById`<a id="svixapplicationupdateapplicationbyid"></a>
 
 Update an application.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const updateAppResponse = await svix.application.updateApp({
-  appId: "unique-app-identifier",
-  name: "My first application",
-  uid: "unique-app-identifier",
-});
+const updateApplicationByIdResponse =
+  await svix.application.updateApplicationById({
+    appId: "unique-app-identifier",
+    name: "My first application",
+    uid: "unique-app-identifier",
+  });
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
@@ -383,14 +384,14 @@ Optional unique identifier for the application
 ---
 
 
-### `svix.authentication.expireAppTokens`<a id="svixauthenticationexpireapptokens"></a>
+### `svix.authentication.expireAllTokens`<a id="svixauthenticationexpirealltokens"></a>
 
 Expire all of the tokens associated with a specific Application
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const expireAppTokensResponse = await svix.authentication.expireAppTokens({
+const expireAllTokensResponse = await svix.authentication.expireAllTokens({
   appId: "unique-app-identifier",
   expiry: 60,
 });
@@ -419,56 +420,20 @@ The request\'s idempotency key
 ---
 
 
-### `svix.authentication.generateMagicLink`<a id="svixauthenticationgeneratemagiclink"></a>
-
-DEPRECATED: Please use `app-portal-access` instead.
+### `svix.authentication.generateMagicLinks`<a id="svixauthenticationgeneratemagiclinks"></a>
 
 Use this function to get magic links (and authentication codes) for connecting your users to the Consumer Application Portal.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const generateMagicLinkResponse = await svix.authentication.generateMagicLink({
-  appId: "unique-app-identifier",
-});
-```
-
-#### ⚙️ Parameters<a id="⚙️-parameters"></a>
-
-##### appId: `string`<a id="appid-string"></a>
-
-The app\'s ID or UID
-
-##### idempotencyKey: `string`<a id="idempotencykey-string"></a>
-
-The request\'s idempotency key
-
-#### 🔄 Return<a id="🔄-return"></a>
-
-[DashboardAccessOut](./models/dashboard-access-out.ts)
-
-#### 🌐 Endpoint<a id="🌐-endpoint"></a>
-
-`/api/v1/auth/dashboard-access/{app_id}` `POST`
-
-[🔙 **Back to Table of Contents**](#table-of-contents)
-
----
-
-
-### `svix.authentication.obtainMagicLinkAndCode`<a id="svixauthenticationobtainmagiclinkandcode"></a>
-
-Use this function to get magic links (and authentication codes) for connecting your users to the Consumer Application Portal.
-
-#### 🛠️ Usage<a id="🛠️-usage"></a>
-
-```typescript
-const obtainMagicLinkAndCodeResponse =
-  await svix.authentication.obtainMagicLinkAndCode({
+const generateMagicLinksResponse = await svix.authentication.generateMagicLinks(
+  {
     appId: "unique-app-identifier",
     featureFlags: [],
     expiry: 604800,
-  });
+  }
+);
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
@@ -502,7 +467,44 @@ The request\'s idempotency key
 ---
 
 
-### `svix.authentication.revokeToken`<a id="svixauthenticationrevoketoken"></a>
+### `svix.authentication.getMagicLinks`<a id="svixauthenticationgetmagiclinks"></a>
+
+DEPRECATED: Please use `app-portal-access` instead.
+
+Use this function to get magic links (and authentication codes) for connecting your users to the Consumer Application Portal.
+
+#### 🛠️ Usage<a id="🛠️-usage"></a>
+
+```typescript
+const getMagicLinksResponse = await svix.authentication.getMagicLinks({
+  appId: "unique-app-identifier",
+});
+```
+
+#### ⚙️ Parameters<a id="⚙️-parameters"></a>
+
+##### appId: `string`<a id="appid-string"></a>
+
+The app\'s ID or UID
+
+##### idempotencyKey: `string`<a id="idempotencykey-string"></a>
+
+The request\'s idempotency key
+
+#### 🔄 Return<a id="🔄-return"></a>
+
+[DashboardAccessOut](./models/dashboard-access-out.ts)
+
+#### 🌐 Endpoint<a id="🌐-endpoint"></a>
+
+`/api/v1/auth/dashboard-access/{app_id}` `POST`
+
+[🔙 **Back to Table of Contents**](#table-of-contents)
+
+---
+
+
+### `svix.authentication.logoutToken`<a id="svixauthenticationlogouttoken"></a>
 
 Logout an app token.
 
@@ -511,7 +513,7 @@ Trying to log out other tokens will fail.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const revokeTokenResponse = await svix.authentication.revokeToken({});
+const logoutTokenResponse = await svix.authentication.logoutToken({});
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
@@ -529,14 +531,14 @@ The request\'s idempotency key
 ---
 
 
-### `svix.backgroundTasks.getTaskById`<a id="svixbackgroundtasksgettaskbyid"></a>
+### `svix.backgroundTasks.getById`<a id="svixbackgroundtasksgetbyid"></a>
 
 Get a background task by ID.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const getTaskByIdResponse = await svix.backgroundTasks.getTaskById({
+const getByIdResponse = await svix.backgroundTasks.getById({
   taskId: "taskId_example",
 });
 ```
@@ -558,14 +560,14 @@ const getTaskByIdResponse = await svix.backgroundTasks.getTaskById({
 ---
 
 
-### `svix.backgroundTasks.listRecentTasks`<a id="svixbackgroundtaskslistrecenttasks"></a>
+### `svix.backgroundTasks.getPastTasks`<a id="svixbackgroundtasksgetpasttasks"></a>
 
 List background tasks executed in the past 90 days.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const listRecentTasksResponse = await svix.backgroundTasks.listRecentTasks({
+const getPastTasksResponse = await svix.backgroundTasks.getPastTasks({
   status: "running",
   task: "endpoint.replay",
   order: "ascending",
@@ -607,7 +609,7 @@ The sorting order of the returned items
 ---
 
 
-### `svix.endpoint.createNew`<a id="svixendpointcreatenew"></a>
+### `svix.endpoint.createOrUpdate`<a id="svixendpointcreateorupdate"></a>
 
 Create a new endpoint for the application.
 
@@ -616,7 +618,7 @@ When `secret` is `null` the secret is automatically generated (recommended)
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const createNewResponse = await svix.endpoint.createNew({
+const createOrUpdateResponse = await svix.endpoint.createOrUpdate({
   appId: "unique-app-identifier",
   description: "An example endpoint name",
   version: 1,
@@ -678,14 +680,14 @@ The request\'s idempotency key
 ---
 
 
-### `svix.endpoint.getEndpoint`<a id="svixendpointgetendpoint"></a>
+### `svix.endpoint.getDetails`<a id="svixendpointgetdetails"></a>
 
 Get an endpoint.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const getEndpointResponse = await svix.endpoint.getEndpoint({
+const getDetailsResponse = await svix.endpoint.getDetails({
   appId: "unique-app-identifier",
   endpointId: "unique-ep-identifier",
 });
@@ -750,7 +752,7 @@ The ep\'s ID or UID
 ---
 
 
-### `svix.endpoint.getSecret`<a id="svixendpointgetsecret"></a>
+### `svix.endpoint.getSigningSecret`<a id="svixendpointgetsigningsecret"></a>
 
 Get the endpoint's signing secret.
 
@@ -760,7 +762,7 @@ For more information please refer to [the consuming webhooks docs](https://docs.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const getSecretResponse = await svix.endpoint.getSecret({
+const getSigningSecretResponse = await svix.endpoint.getSigningSecret({
   appId: "unique-app-identifier",
   endpointId: "unique-ep-identifier",
 });
@@ -789,14 +791,14 @@ The ep\'s ID or UID
 ---
 
 
-### `svix.endpoint.getStats`<a id="svixendpointgetstats"></a>
+### `svix.endpoint.getStatistics`<a id="svixendpointgetstatistics"></a>
 
 Get basic statistics for the endpoint.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const getStatsResponse = await svix.endpoint.getStats({
+const getStatisticsResponse = await svix.endpoint.getStatistics({
   appId: "unique-app-identifier",
   endpointId: "unique-ep-identifier",
 });
@@ -1095,14 +1097,14 @@ The request\'s idempotency key
 ---
 
 
-### `svix.endpoint.resendFailedWebhooks`<a id="svixendpointresendfailedwebhooks"></a>
+### `svix.endpoint.resendFailedMessages`<a id="svixendpointresendfailedmessages"></a>
 
 Resend all failed messages since a given time.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const resendFailedWebhooksResponse = await svix.endpoint.resendFailedWebhooks({
+const resendFailedMessagesResponse = await svix.endpoint.resendFailedMessages({
   appId: "unique-app-identifier",
   endpointId: "unique-ep-identifier",
   since: "1970-01-01T00:00:00.00Z",
@@ -1181,18 +1183,19 @@ The request\'s idempotency key
 ---
 
 
-### `svix.endpoint.sendExampleMessage`<a id="svixendpointsendexamplemessage"></a>
+### `svix.endpoint.sendExampleMessageType`<a id="svixendpointsendexamplemessagetype"></a>
 
 Send an example message for event
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const sendExampleMessageResponse = await svix.endpoint.sendExampleMessage({
-  appId: "unique-app-identifier",
-  endpointId: "unique-ep-identifier",
-  eventType: "user.signup",
-});
+const sendExampleMessageTypeResponse =
+  await svix.endpoint.sendExampleMessageType({
+    appId: "unique-app-identifier",
+    endpointId: "unique-ep-identifier",
+    eventType: "user.signup",
+  });
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
@@ -1264,14 +1267,51 @@ The ep\'s ID or UID
 ---
 
 
-### `svix.endpoint.updateEndpoint`<a id="svixendpointupdateendpoint"></a>
+### `svix.endpoint.setWebhookHeaders`<a id="svixendpointsetwebhookheaders"></a>
+
+Set the additional headers to be sent with the webhook
+
+#### 🛠️ Usage<a id="🛠️-usage"></a>
+
+```typescript
+const setWebhookHeadersResponse = await svix.endpoint.setWebhookHeaders({
+  appId: "unique-app-identifier",
+  endpointId: "unique-ep-identifier",
+  headers: {
+    key: "string_example",
+  },
+});
+```
+
+#### ⚙️ Parameters<a id="⚙️-parameters"></a>
+
+##### headers: Record<string, `string`><a id="headers-record"></a>
+
+##### appId: `string`<a id="appid-string"></a>
+
+The app\'s ID or UID
+
+##### endpointId: `string`<a id="endpointid-string"></a>
+
+The ep\'s ID or UID
+
+#### 🌐 Endpoint<a id="🌐-endpoint"></a>
+
+`/api/v1/app/{app_id}/endpoint/{endpoint_id}/headers` `PUT`
+
+[🔙 **Back to Table of Contents**](#table-of-contents)
+
+---
+
+
+### `svix.endpoint.updateEndpointById`<a id="svixendpointupdateendpointbyid"></a>
 
 Update an endpoint.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const updateEndpointResponse = await svix.endpoint.updateEndpoint({
+const updateEndpointByIdResponse = await svix.endpoint.updateEndpointById({
   appId: "unique-app-identifier",
   endpointId: "unique-ep-identifier",
   description: "An example endpoint name",
@@ -1329,44 +1369,7 @@ List of message channels this endpoint listens to (omit for all)
 ---
 
 
-### `svix.endpoint.updateHeaders`<a id="svixendpointupdateheaders"></a>
-
-Set the additional headers to be sent with the webhook
-
-#### 🛠️ Usage<a id="🛠️-usage"></a>
-
-```typescript
-const updateHeadersResponse = await svix.endpoint.updateHeaders({
-  appId: "unique-app-identifier",
-  endpointId: "unique-ep-identifier",
-  headers: {
-    key: "string_example",
-  },
-});
-```
-
-#### ⚙️ Parameters<a id="⚙️-parameters"></a>
-
-##### headers: Record<string, `string`><a id="headers-record"></a>
-
-##### appId: `string`<a id="appid-string"></a>
-
-The app\'s ID or UID
-
-##### endpointId: `string`<a id="endpointid-string"></a>
-
-The ep\'s ID or UID
-
-#### 🌐 Endpoint<a id="🌐-endpoint"></a>
-
-`/api/v1/app/{app_id}/endpoint/{endpoint_id}/headers` `PUT`
-
-[🔙 **Back to Table of Contents**](#table-of-contents)
-
----
-
-
-### `svix.eventType.archiveType`<a id="svixeventtypearchivetype"></a>
+### `svix.eventType.archive`<a id="svixeventtypearchive"></a>
 
 Archive an event type.
 
@@ -1378,7 +1381,7 @@ An event type can be unarchived with the
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const archiveTypeResponse = await svix.eventType.archiveType({
+const archiveResponse = await svix.eventType.archive({
   eventTypeName: "user.signup",
   expunge: false,
 });
@@ -1455,14 +1458,14 @@ The request\'s idempotency key
 ---
 
 
-### `svix.eventType.getByName`<a id="svixeventtypegetbyname"></a>
+### `svix.eventType.getEventType`<a id="svixeventtypegeteventtype"></a>
 
 Get an event type.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const getByNameResponse = await svix.eventType.getByName({
+const getEventTypeResponse = await svix.eventType.getEventType({
   eventTypeName: "user.signup",
 });
 ```
@@ -1480,56 +1483,6 @@ The event type\'s name
 #### 🌐 Endpoint<a id="🌐-endpoint"></a>
 
 `/api/v1/event-type/{event_type_name}` `GET`
-
-[🔙 **Back to Table of Contents**](#table-of-contents)
-
----
-
-
-### `svix.eventType.getList`<a id="svixeventtypegetlist"></a>
-
-Return the list of event types.
-
-#### 🛠️ Usage<a id="🛠️-usage"></a>
-
-```typescript
-const getListResponse = await svix.eventType.getList({
-  iterator: "user.signup",
-  order: "ascending",
-  includeArchived: false,
-  withContent: false,
-});
-```
-
-#### ⚙️ Parameters<a id="⚙️-parameters"></a>
-
-##### limit: `number`<a id="limit-number"></a>
-
-Limit the number of returned items
-
-##### iterator: `string`<a id="iterator-string"></a>
-
-The iterator returned from a prior invocation
-
-##### order: [`Ordering`](./models/ordering.ts)<a id="order-orderingmodelsorderingts"></a>
-
-The sorting order of the returned items
-
-##### includeArchived: `boolean`<a id="includearchived-boolean"></a>
-
-When `true` archived (deleted but not expunged) items are included in the response
-
-##### withContent: `boolean`<a id="withcontent-boolean"></a>
-
-When `true` the full item (including the schema) is included in the response
-
-#### 🔄 Return<a id="🔄-return"></a>
-
-[ListResponseEventTypeOut](./models/list-response-event-type-out.ts)
-
-#### 🌐 Endpoint<a id="🌐-endpoint"></a>
-
-`/api/v1/event-type` `GET`
 
 [🔙 **Back to Table of Contents**](#table-of-contents)
 
@@ -1580,17 +1533,68 @@ The request\'s idempotency key
 ---
 
 
-### `svix.eventType.partiallyUpdateType`<a id="svixeventtypepartiallyupdatetype"></a>
+### `svix.eventType.list`<a id="svixeventtypelist"></a>
+
+Return the list of event types.
+
+#### 🛠️ Usage<a id="🛠️-usage"></a>
+
+```typescript
+const listResponse = await svix.eventType.list({
+  iterator: "user.signup",
+  order: "ascending",
+  includeArchived: false,
+  withContent: false,
+});
+```
+
+#### ⚙️ Parameters<a id="⚙️-parameters"></a>
+
+##### limit: `number`<a id="limit-number"></a>
+
+Limit the number of returned items
+
+##### iterator: `string`<a id="iterator-string"></a>
+
+The iterator returned from a prior invocation
+
+##### order: [`Ordering`](./models/ordering.ts)<a id="order-orderingmodelsorderingts"></a>
+
+The sorting order of the returned items
+
+##### includeArchived: `boolean`<a id="includearchived-boolean"></a>
+
+When `true` archived (deleted but not expunged) items are included in the response
+
+##### withContent: `boolean`<a id="withcontent-boolean"></a>
+
+When `true` the full item (including the schema) is included in the response
+
+#### 🔄 Return<a id="🔄-return"></a>
+
+[ListResponseEventTypeOut](./models/list-response-event-type-out.ts)
+
+#### 🌐 Endpoint<a id="🌐-endpoint"></a>
+
+`/api/v1/event-type` `GET`
+
+[🔙 **Back to Table of Contents**](#table-of-contents)
+
+---
+
+
+### `svix.eventType.partiallyUpdateEventType`<a id="svixeventtypepartiallyupdateeventtype"></a>
 
 Partially update an event type.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const partiallyUpdateTypeResponse = await svix.eventType.partiallyUpdateType({
-  eventTypeName: "user.signup",
-  featureFlag: "cool-new-feature",
-});
+const partiallyUpdateEventTypeResponse =
+  await svix.eventType.partiallyUpdateEventType({
+    eventTypeName: "user.signup",
+    featureFlag: "cool-new-feature",
+  });
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
@@ -1620,14 +1624,14 @@ The event type\'s name
 ---
 
 
-### `svix.eventType.updateType`<a id="svixeventtypeupdatetype"></a>
+### `svix.eventType.updateEventTypeName`<a id="svixeventtypeupdateeventtypename"></a>
 
 Update an event type.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const updateTypeResponse = await svix.eventType.updateType({
+const updateEventTypeNameResponse = await svix.eventType.updateEventTypeName({
   eventTypeName: "user.signup",
   description: "A user has signed up",
   archived: false,
@@ -1664,14 +1668,14 @@ The schema for the event type for a specific version as a JSON schema.
 ---
 
 
-### `svix.health.checkServerStatus`<a id="svixhealthcheckserverstatus"></a>
+### `svix.health.checkStatus`<a id="svixhealthcheckstatus"></a>
 
 Verify the API server is up and running.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const checkServerStatusResponse = await svix.health.checkServerStatus();
+const checkStatusResponse = await svix.health.checkStatus();
 ```
 
 #### 🌐 Endpoint<a id="🌐-endpoint"></a>
@@ -1826,14 +1830,14 @@ The integ\'s ID
 ---
 
 
-### `svix.integration.listIntegrations`<a id="svixintegrationlistintegrations"></a>
+### `svix.integration.list`<a id="svixintegrationlist"></a>
 
 List the application's integrations.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const listIntegrationsResponse = await svix.integration.listIntegrations({
+const listResponse = await svix.integration.list({
   appId: "unique-app-identifier",
   iterator: "integ_1srOrx2ZWZBpBUvZwXKQmoEYga2",
 });
@@ -1866,18 +1870,17 @@ The iterator returned from a prior invocation
 ---
 
 
-### `svix.integration.rotateIntegrationKey`<a id="svixintegrationrotateintegrationkey"></a>
+### `svix.integration.rotateKey`<a id="svixintegrationrotatekey"></a>
 
 Rotate the integration's key. The previous key will be immediately revoked.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const rotateIntegrationKeyResponse =
-  await svix.integration.rotateIntegrationKey({
-    appId: "unique-app-identifier",
-    integId: "integ_1srOrx2ZWZBpBUvZwXKQmoEYga2",
-  });
+const rotateKeyResponse = await svix.integration.rotateKey({
+  appId: "unique-app-identifier",
+  integId: "integ_1srOrx2ZWZBpBUvZwXKQmoEYga2",
+});
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
@@ -1907,18 +1910,19 @@ The request\'s idempotency key
 ---
 
 
-### `svix.integration.updateIntegration`<a id="svixintegrationupdateintegration"></a>
+### `svix.integration.updateIntegrationById`<a id="svixintegrationupdateintegrationbyid"></a>
 
 Update an integration.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const updateIntegrationResponse = await svix.integration.updateIntegration({
-  appId: "unique-app-identifier",
-  integId: "integ_1srOrx2ZWZBpBUvZwXKQmoEYga2",
-  name: "Example Integration",
-});
+const updateIntegrationByIdResponse =
+  await svix.integration.updateIntegrationById({
+    appId: "unique-app-identifier",
+    integId: "integ_1srOrx2ZWZBpBUvZwXKQmoEYga2",
+    name: "Example Integration",
+  });
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
@@ -1946,7 +1950,7 @@ The integ\'s ID
 ---
 
 
-### `svix.message.createNew`<a id="svixmessagecreatenew"></a>
+### `svix.message.createNewMsg`<a id="svixmessagecreatenewmsg"></a>
 
 Creates a new message and dispatches it to all of the application's endpoints.
 
@@ -1961,7 +1965,7 @@ The `payload` property is the webhook's body (the actual webhook message). Svix 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const createNewResponse = await svix.message.createNew({
+const createNewMsgResponse = await svix.message.createNewMsg({
   appId: "unique-app-identifier",
   withContent: true,
   tags: ["my_tag", "other"],
@@ -2220,14 +2224,14 @@ The attempt\'s ID
 ---
 
 
-### `svix.messageAttempt.getByDestination`<a id="svixmessageattemptgetbydestination"></a>
+### `svix.messageAttempt.getByAttempt`<a id="svixmessageattemptgetbyattempt"></a>
 
 `msg_id`: Use a message id or a message `eventId`
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const getByDestinationResponse = await svix.messageAttempt.getByDestination({
+const getByAttemptResponse = await svix.messageAttempt.getByAttempt({
   appId: "unique-app-identifier",
   msgId: "unique-msg-identifier",
   attemptId: "atmpt_1srOrx2ZWZBpBUvZwXKQmoEYga2",
@@ -2577,7 +2581,7 @@ Filter response based on the event type
 ---
 
 
-### `svix.messageAttempt.listByMsgAttemptedDestinations`<a id="svixmessageattemptlistbymsgattempteddestinations"></a>
+### `svix.messageAttempt.listByMsg`<a id="svixmessageattemptlistbymsg"></a>
 
 List attempts by message id
 
@@ -2590,18 +2594,17 @@ set the `before` or `after` parameter as appropriate.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const listByMsgAttemptedDestinationsResponse =
-  await svix.messageAttempt.listByMsgAttemptedDestinations({
-    iterator: "atmpt_1srOrx2ZWZBpBUvZwXKQmoEYga2",
-    status: 0,
-    statusCodeClass: 0,
-    channel: "project_1337",
-    tag: "project_1337",
-    endpointId: "unique-ep-identifier",
-    withContent: true,
-    appId: "unique-app-identifier",
-    msgId: "unique-msg-identifier",
-  });
+const listByMsgResponse = await svix.messageAttempt.listByMsg({
+  iterator: "atmpt_1srOrx2ZWZBpBUvZwXKQmoEYga2",
+  status: 0,
+  statusCodeClass: 0,
+  channel: "project_1337",
+  tag: "project_1337",
+  endpointId: "unique-ep-identifier",
+  withContent: true,
+  appId: "unique-app-identifier",
+  msgId: "unique-msg-identifier",
+});
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
@@ -2671,7 +2674,7 @@ Filter response based on the event type
 ---
 
 
-### `svix.messageAttempt.listByMsgAttemptedDestinations_0`<a id="svixmessageattemptlistbymsgattempteddestinations_0"></a>
+### `svix.messageAttempt.listByMsgAttempt`<a id="svixmessageattemptlistbymsgattempt"></a>
 
 Deprecated: Please use "List Attempts by Endpoint" and "List Attempts by Msg" instead.
 
@@ -2685,17 +2688,16 @@ set the `before` or `after` parameter as appropriate.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const listByMsgAttemptedDestinations_0Response =
-  await svix.messageAttempt.listByMsgAttemptedDestinations_0({
-    iterator: "atmpt_1srOrx2ZWZBpBUvZwXKQmoEYga2",
-    endpointId: "unique-ep-identifier",
-    channel: "project_1337",
-    tag: "project_1337",
-    status: 0,
-    statusCodeClass: 0,
-    appId: "unique-app-identifier",
-    msgId: "unique-msg-identifier",
-  });
+const listByMsgAttemptResponse = await svix.messageAttempt.listByMsgAttempt({
+  iterator: "atmpt_1srOrx2ZWZBpBUvZwXKQmoEYga2",
+  endpointId: "unique-ep-identifier",
+  channel: "project_1337",
+  tag: "project_1337",
+  status: 0,
+  statusCodeClass: 0,
+  appId: "unique-app-identifier",
+  msgId: "unique-msg-identifier",
+});
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
@@ -2761,19 +2763,18 @@ Filter response based on the event type
 ---
 
 
-### `svix.messageAttempt.resendMessageToEndpoint`<a id="svixmessageattemptresendmessagetoendpoint"></a>
+### `svix.messageAttempt.resendWebhook`<a id="svixmessageattemptresendwebhook"></a>
 
 Resend a message to the specified endpoint.
 
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const resendMessageToEndpointResponse =
-  await svix.messageAttempt.resendMessageToEndpoint({
-    appId: "unique-app-identifier",
-    msgId: "unique-msg-identifier",
-    endpointId: "unique-ep-identifier",
-  });
+const resendWebhookResponse = await svix.messageAttempt.resendWebhook({
+  appId: "unique-app-identifier",
+  msgId: "unique-msg-identifier",
+  endpointId: "unique-ep-identifier",
+});
 ```
 
 #### ⚙️ Parameters<a id="⚙️-parameters"></a>
@@ -2803,7 +2804,7 @@ The request\'s idempotency key
 ---
 
 
-### `svix.statistics.calculateEventTypesForAllApps`<a id="svixstatisticscalculateeventtypesforallapps"></a>
+### `svix.statistics.calculateEventTypesForApps`<a id="svixstatisticscalculateeventtypesforapps"></a>
 
 Creates a background task to calculate the listed event types for all apps in the organization.
 
@@ -2813,8 +2814,8 @@ retrieve the results of the operation.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const calculateEventTypesForAllAppsResponse =
-  await svix.statistics.calculateEventTypesForAllApps();
+const calculateEventTypesForAppsResponse =
+  await svix.statistics.calculateEventTypesForApps();
 ```
 
 #### 🔄 Return<a id="🔄-return"></a>
@@ -2830,7 +2831,7 @@ const calculateEventTypesForAllAppsResponse =
 ---
 
 
-### `svix.statistics.calculateMessageDestinations`<a id="svixstatisticscalculatemessagedestinations"></a>
+### `svix.statistics.calculateMessageDestinationsForApps`<a id="svixstatisticscalculatemessagedestinationsforapps"></a>
 
 Creates a background task to calculate the message destinations for all applications in the environment.
 
@@ -2840,8 +2841,8 @@ retrieve the results of the operation.
 #### 🛠️ Usage<a id="🛠️-usage"></a>
 
 ```typescript
-const calculateMessageDestinationsResponse =
-  await svix.statistics.calculateMessageDestinations({
+const calculateMessageDestinationsForAppsResponse =
+  await svix.statistics.calculateMessageDestinationsForApps({
     since: "1970-01-01T00:00:00.00Z",
     until: "1970-01-01T00:00:00.00Z",
   });
